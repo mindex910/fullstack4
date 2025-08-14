@@ -2,8 +2,6 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const config = require("../utils/config");
 
-// HUOM pöytäkoneelle:
-// Tätä ei oo testattu !! 7.8. torstai
 const userSchema = mongoose.Schema({
   username: {
     type: String,
