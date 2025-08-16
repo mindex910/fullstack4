@@ -5,11 +5,17 @@ const config = require("../utils/config");
 const userSchema = mongoose.Schema({
   username: {
     type: String,
-    required: true,
-    unique: true,
+    required: [true, "username required"],
+    unique: [true, "username must be unique"],
+    minlength: [3, "username must be over 3 characters"],
   },
   name: String,
   passwordHash: String,
+  blogs: [
+    {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Blog"
+}]
 });
 
 userSchema.set("toJSON", {
