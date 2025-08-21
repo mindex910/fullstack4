@@ -4,6 +4,7 @@ const usersRouter = require("./controllers/users")
 const loginRouter = require("./controllers/login")
 const errorHandler = require("./middlewares/errorHandler")
 const tokenExtractor = require("./middlewares/tokenExtractor")
+const userExtractor = require("./middlewares/userExtractor")
 
 const app = express()
 
